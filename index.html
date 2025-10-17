@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Lien vers le CSS local -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Lien vers le JS local -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio de  Guerni_t</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      padding-top: 56px;
+    }
+    header {
+      background-image: url('https://via.placeholder.com/1200x300');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      color: rgb(7, 27, 143);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    header h1 {
+      background-color: rgba(255, 0, 200, 0.5);
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Portfolio</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<header>
+  <h1>Portfolio de Guerni_t</h1>
+</header>
+
+<!-- Cards Sections -->
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">À propos</h5>
+          <p class="card-text">Découvrez mon Parcours et mes compétences.</p>
+          <a href="about.html" class="btn btn-primary">👀 +</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">My Portfolio</h5>
+          <p class="card-text">Vous retrouverez mes projets crée par le passé</p>
+          <a href="portfolio.html" class="btn btn-primary">➡️ 👀</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Form -->
+<div class="container mb-5">
+  <h2>Contactez-moi</h2>
+  <form id="contactForm">
+    <div class="mb-3">
+      <label for="name" class="form-label">Nom</label>
+      <input type="text" class="form-control" id="name" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" required>
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Message</label>
+      <textarea class="form-control" id="message" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Envoyer</button>
+    <p id="confirmation" class="text-success mt-3 d-none">Message envoyé avec succès !</p>
+  </form>
+</div>
+
+<!-- Bootstrap + JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Simple validation (déjà gérée par "required")
+    document.getElementById('confirmation').classList.remove('d-none');
+    this.reset();
+  });
+</script>
+</body>
+</html>
